@@ -1,0 +1,21 @@
+
+        <p>GUEST BOOK<p>
+        <div class="container">
+                {% for visitor in visitors %}
+                <p>{{ visitor.getName()  }} <br> {{ visitor.getSurname() }} <br> {{ visitor.getMessage() }} <br> {{visitor.getDate() }} <br><br> </p>
+                {% endfor %}
+
+                <form method="POST">
+                First name:<br>
+                <input type="text" name="name" value="Adam">
+                <br>
+                Last name:<br>
+                <input type="text" name="surname" value="Nowak">
+                <br>
+                Message:<br>
+                <input type="text" name="message" value="Be or not to be">
+                <br>
+                <input type="submit" value="Submit">
+                </form>
+        </div>
+
